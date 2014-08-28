@@ -1,0 +1,15 @@
+Copy-On-Write Proxy: Defers copying (cloning) a target object until required by client actions. Really a form of virtual proxy.
+
+Suppose we have a large collection object, such as a
+hash table, which multiple clients want to access concurrently.
+One of the clients wants to perform a series of consecutive fetch
+operations while not letting any other client add or remove
+elements.
+
+The proxy is the class LargeHashtable. When the proxy's clone()
+method is invoked, it returns a copy of the proxy and both proxies
+refer to the same hash table. When one of the proxies modifies
+the hash table, the hash table itself is cloned. The
+ReferenceCountedHashTable class is used to let the proxies know
+they are working with a shared hash table . This class keeps track
+of the number of proxies using the shared hash table.

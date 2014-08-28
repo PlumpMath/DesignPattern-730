@@ -1,0 +1,12 @@
+Problem statement:
+
+Imagine a scenario where we have a pizza which is already baked with tomato and cheese. After that you just recall that you need to put some additional topping at customer’s choice. So you will need to give some additional toppings like chicken and pepper on the go.
+
+Intent:
+
+Add or remove additional functionalities or responsibilities from the object dynamically without impacting the original object.
+At times it is required when addition of functionalities is not possible by subclassing as it might create loads of subclasses.
+
+Solution:
+
+So in this case we are not using inheritance to add additional functionalities to the object i.e. pizza, instead we are using composition. This pattern is useful when we don’t want to use inheritance and rather use composition.

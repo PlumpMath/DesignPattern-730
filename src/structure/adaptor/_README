@@ -1,0 +1,19 @@
+>Intent
+1. Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces. [GoF, p139] 
+2. Wrap an existing class with a new interface. [Legency reuse]
+3. Impedance match an old component to a new system. [Compatibility] 
+
+>Problem
+An "off the shelf" component offers compelling functionality that you would like to reuse, but its "view of the world" is not compatible with the philosophy and architecture of the system currently being developed. 
+
+wrapper/wrappee or delegation or "has a" relationship
+Adapter ... wrap a legacy object that provides an incompatible interface with an object that supports the desired interface
+Facade ... wrap a complicated subsystem with an object that provides a simple interface
+Proxy ... wrap an object with a surrogate object that provides additional functionality
+
+Rules of thumb
+Adapter makes things work after they're designed; Bridge makes them work before they are. [GoF, p219]
+Bridge is designed up-front to let the abstraction and the implementation vary independently. Adapter is retrofitted to make unrelated classes work together. [GoF, p161]
+Adapter provides a different interface to its subject. Proxy provides the same interface. Decorator provides an enhanced interface. [GoF. p216]
+Adapter is meant to change the interface of an existing object. Decorator enhances another object without changing its interface. Decorator is thus more transparent to the application than an adapter is. As a consequence, Decorator supports recursive composition, which isn't possible with pure Adapters. [GoF, 149]
+Facade defines a new interface, whereas Adapter reuses an old interface. Remember that Adapter makes two existing interfaces work together as opposed to defining an entirely new one. [GoF, pp219] 

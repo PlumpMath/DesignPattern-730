@@ -1,0 +1,35 @@
+Remote Proxy
+1. Write proxy interface IMessageService.
+> Must extends java.rmi.Remote.
+> Must throw java.rmi.RemoteException .
+
+2. Write real Implementation.
+
+3. Write Server for bind service.
+
+4. Write Client.
+   
+Compile and Run:
+On server side:
+1.Complie: IMessageService.java, MessageServiceImpl.java ,MessageServer.java, Message.java
+$ javac -d . dp/proxy/rmi/*.java
+
+2. Start RMI service.
+$ start rmiregistry
+
+3. Generate stub.
+$ rmic dp.proxy.rmi.MessageServiceImpl
+
+On Client:
+1. Copy IMessageService.class *_stub.class, Message.class
+
+2. Complile CommunicatorClient.
+
+3. Start Client.
+
+
+Security:
+java -Djava.security.policy=dp/proxy/rmi/security.policy dp.proxy.rmi.MessageServer
+
+
+

@@ -1,0 +1,3 @@
+Virtual Proxies: 
+delaying the creation and initialization of expensive objects until needed, where the objects are created on demand 
+- For example creating the RealSubject object only when the doSomething method is invoked.

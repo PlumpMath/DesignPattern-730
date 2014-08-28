@@ -1,0 +1,13 @@
+Scenario: A class library provides a Table class, but does not provide a capability to allow clients to lock individual table rows.
+We do not have the source code for this class library, but we have complete documentation and know the interface of the Table class. 
+How can we provide a row locking capability for the Table class?
+
+public class RowLockTableProxy implements ITable {
+Table realTable;
+Integer[] locks;
+public RowLockTableProxy(Table toLock) {
+realTable = toLock;
+locks = new Integer[toLock.getNumberOfRows()];
+for (int row = 0; row < toLock.getNumberOfRows(); row++)
+locks[row] = new Integer(row);
+}

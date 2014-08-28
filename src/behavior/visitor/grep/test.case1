@@ -1,0 +1,4 @@
+grep a* from abc, aac, a
+/*grep *abc* from abc*/
+/*grep a*bc from aaabbbabc*/
+/*grep *abc from abc,aaabbbabc*/

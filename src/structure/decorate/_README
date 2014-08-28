@@ -1,0 +1,34 @@
+>Intent
+1. Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. [GoF, p175] 
+2. Client-specified embellishment of a core object by recursively wrapping it. 
+3. Wrapping a gift, putting it in a box, and wrapping the box. 
+
+>Problem
+You want to add behavior or state to individual objects at run-time. Inheritance is not feasible because it is static and applies to an entire class.
+
+
+Decorator pattern is one of the widely used structural patterns. This pattern dynamically changes the functionality of an object at runtime without impacting the existing functionality of the objects. In short this pattern adds additional functionalities to the object by wrapping it.
+Related Patterns
+Adapter Pattern - A decorator is different from an adapter in that a decorator changes object's responsibilities, while an adapter changes an object interface.
+Composite Pattern - A decorator can be viewed as a degenerate composite with only one component. However, a decorator adds additional responsibilities.
+
+Consequences
+Decoration is more convenient for adding functionalities to objects instead of entire classes at runtime. With decoration it is also possible to remove the added functionalities dynamically.
+Decoration adds functionality to objects at runtime which would make debugging system functionality harder.
+
+
+Decorate Pattern:
+This pattern dynamically changes the functionality of an object at runtime without impacting the existing functionality of the objects. In short this pattern adds additional functionalities to the object by wrapping it.
+
+Docorate vs. Adapter:
+Decorator pattern changes object's responsibilities, while an adapter changes an object interface.
+Decorator pattern enhances the functionality of the object whereas Adapter pattern plugs different interfaces together.
+
+Docorate vs. Strategy:
+Strategy pattern changes the original object without wrapping it.
+
+Docorate vs. Proxy:
+Proxy pattern controls access to the object the decorator pattern enhances the functionality of the object.
+
+Docorate vs. Composite
+Both Composite and Decorator pattern uses the same tree structure but there are subtle differences between both of them. We can use composite pattern when we need to keep the group of objects having similar behavior inside another object. However decorator pattern is used when we need to modify the functionality of the object at runtime.
